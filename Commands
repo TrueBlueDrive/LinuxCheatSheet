@@ -1,0 +1,100 @@
+ls	Lists all files and directories in the present working directory
+ls -R	Lists files in sub-directories as well
+ls -a	Lists hidden files as well
+ls -al	Lists files and directories with detailed information.
+ls 'path' | more	Show listing one screen at a time
+cd or cd ~	Navigate to HOME directory
+cd ..	Move one level up
+cd	To change to a particular directory
+cd /	Move to the root directory
+cp 'file1' 'file2'	Copy file1 to file2
+cp -r 'dir1' 'dir2'	Copy directory and all subdirs recursively
+cat 'newfile' >> 'oldfile'	Append newfile to end of oldfile
+mv 'oldfile' 'newfile'	Rename/Move a file
+diff 'file1' 'file2'	Show the differences between 2 files
+sdiff 'file1' 'file2'	Show the differences between 2 files side by side
+chown user	For changing the ownership of a file/directory
+chown user:group filename	Change the user as well as group for a file or directory
+cat > filename	Creates a new file
+cat filename	Displays the file content
+cat file1 file2 > file3	Joins two files file1 and file2 and stores the output in a new file file3
+grep 'pattern' 'file'	Find regular expression in file.
+spell 'file'	Display misspelled words.
+wc 'file'	Count words in file.
+wc -l 'file'	Count the number of lines in a file.
+VARIABLE_NAME= variable_value	Create a new variable with a value assigned
+echo $VARIABLE	To display the value of a variable
+mv file new_file_path	Moves the files to the new location
+mv filename new_file_name	Renames the file to a new filename
+sudo	Allows regular users to run programs with the security privileges of the superuser or root
+rm filename	Deletes a file
+rm -r 'dirname'	Remove all files and subdirectories
+man	Gives help information on a command
+history	Gives a list of all past commands typed in the current terminal session
+clear	Clears the terminal
+mkdir directoryname	Creates a new directory in the present working directory or at the specified path
+rmdir	Deletes a directory
+mv	Renames a directory
+pr -x	Divides a file into x columns
+pr -h	Assigns a header to a file
+pr -n	Denotes a file with Line Numbers
+lp -nc or lpr c	Prints 'c' number of copies of a File
+lp-d or lp-P	Specifies name of the printer
+apt-get	Command used to install and update packages
+mail -s 'subject -c 'cc-address' -b 'bcc-address' 'to-address'	Command to send email
+mail -s 'Subject' to-address < Filename	Command to send email with attachment
+sudo adduser username	To add a new user
+sudo passwd -l 'username'	To change the password of a user
+sudo userdel -r 'username'	To remove a newly created user
+sudo usermod -a -G GROUPNAME USERNAME	To add a user to a group
+sudo deluser USER GROUPNAME	To remove a user from a group
+finger	Shows information of all the users logged in
+finger username	Gives information of a particular user
+SSH username@ip-address or hostname	login into a remote Linux machine using SSH
+ping 'hostname'	To ping and Analyzing network and host connections
+top	Details on all Active Processes
+ps	Give the status of processes running for a user
+ps PID	Gives the status of a particular process
+pidof	Gives the Process ID (PID) of a process
+kill PID	Kills a process
+
+
+grep -v ‘^$’ filename > new_filename	Remove Blank Lines in a file
+ls -l | grep '^-' | awk '/^-/ {if ($5 !=0 ) print $9 }'	Display zero byte size files
+sed 's/honey/pasta/n' < filename	Replace the nth occurrence of the word 'honey' with 'pasta' in a file
+echo 'string' | tr [a-z] [A-Z]	command to convert a string from lower case to upper case
+grep -i 'search string' filename	Search for a given string in a file (case in-sensitive search)
+cal 03 2022	Display the calendar for the month march in the year 2022
+find -atime n -type f	List the files that are accessed n days ago in the current directory
+find -mtime n -type f	List the files that were modified n days ago in the current directory
+find -ctime n -type f	List the files that were changed n days ago in the current directory
+grep -A 3 -i 'search string' filename	Print the matched line along with the 3 lines after it
+grep -r 'search string' *	Search for a given string in all files recursively
+grep 'math$' filename	Command to print the lines which end with the word 'math'
+sed -n '1!G;h;$p' filename	Print file content in reverse order
+grep -l apple *	Print the file names in a directory that has the word apple
+cat /dev/null > filename	Make an existing file empty
+awk '{print $n;}' filename	Print nth field from a file
+sed 'p' < filename	Command to duplicate each line in a file
+vim +n fwilename	Go to the nth line of file
+sort filename	Sort a file in ascending order
+find . -depth -print	Command to display all the files recursively with path under current directory
+gzip filename	Create a *.gz compressed file
+cut -c -10 filename	Command to display the first 10 characters from each line of a file
+cut -c n- filename	Display the nth character to the end of the line from a file
+gzip -d test.txt.gz	Uncompress a *.gz file
+ls -l | grep '^-'| awk 'BEGIN {sum=0} {sum = sum + $5} END {print sum}'	Command to find the sum of bytes (size of file) of all files in a directory
+head -n filename	Print First n lines of a file
+tail -n filename	Print last n lines of a file
+sed -i '1 d' filename	Remove the Header of a file
+sed -i '$ d' filename	Remove last line of a file
+grep -v alex filename	command to display the lines in a file that do not contain the word 'alex'
+grep -c 'Word' filename	Count the number of occurences of a word in a file
+sed s/apple/ball/g fileName	Replace all the occurences of the word 'apple' with the word 'ball' in a file
+echo 'string' | rev	Reverse a string
+echo 'sentence' | rev | cut -f1 -d' ' | rev	Get the last word of a sentence
+echo $?	Checks if the last executed command was successful or not
+df -kl	Command to find remaining disk space in the UNIX server
+join file1.txt file2.txt	Joins 2 files on a common field
+tar cvf archive_name.tar dirname/	Create a new tar archive
+tar xvf archive_name.tar	Extract from an existing tar archive
